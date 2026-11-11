@@ -5,10 +5,15 @@ A lightweight financial analytics tool built with Python, Pandas, NumPy, and Mat
 ---
 
 ## Features
-- **Data Ingestion & Cleaning:** Reads CSV transaction logs, normalizes datetime objects, and cleans bad numeric inputs using **Pandas**.
-- **Statistical Aggregation:** Calculates total expenses, average transaction cost, and median spending using **NumPy**.
-- **Spending by Category:** Aggregates and ranks categories to identify the biggest expenses.
-- **Automated Visual Reporting:** Generates a dual-panel figure (category bar chart + chronological trend line) and exports it as a 300 DPI image (`expense_summary.png`) using **Matplotlib**.
+- **Schema-Agnostic Ingestion:** Dynamic column-detection engine that maps varying header patterns (price, revenue, cost, timestamps, dates) automatically.
+- **Data Sanitization:** Regex-driven cleaning pipeline stripping non-numeric formatting (currency symbols, comma delimiters) before numeric conversion.
+- **Statistical Array Computations:** Employs NumPy vector methods (`sum`, `mean`, `median`, `std`) on dynamic targets.
+- **Adaptive Visual Architecture:** Generates categorical rankings alongside an adaptive secondary panel (chronological time-series or fallback frequency histogram).
+
+## Usage
+Run with default sample data:
+```bash
+python core.py
 
 ---
 
